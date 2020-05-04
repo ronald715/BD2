@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['call_interfazdb.py'],
-             pathex=['/Users/ronald/Desktop/python'],
+a = Analysis(['call_interfazdb.pyw'],
+             pathex=['/Users/ronald/Documents/GitHub/BD2/clase3'],
              binaries=[],
              datas=[],
              hiddenimports=[],
