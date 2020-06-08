@@ -3,16 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Index</title>
+
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+      <link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+
+
   </head>
   <body>
-        {% if latest_question_list %}
+
+
+
+
+  <section class="section-purple">
+              {% if latest_question_list %}
             <ul>
             {% for question in latest_question_list %}
-                <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                <li ><a  href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
             {% endfor %}
             </ul>
         {% else %}
             <p>No hay encuestas (polls) disponibles.</p>
         {% endif %}
+
+
+        <div class="">
+            <div class="wave">
+                <svg height="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L120,117.3C240,107,480,85,720,117.3C960,149,1200,235,1320,277.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+                </svg>
+            </div>
+
+        </div>
+
+  </section>
+
+
+
+
+
+
+
   </body>
 </html>
