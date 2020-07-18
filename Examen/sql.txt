@@ -1,0 +1,23 @@
+mysqlsh -u root -p
+
+\sql
+
+USE Tienda01;
+
+CREATE TABLE proveedores (nombres VARCHAR(30), apellidos VARCHAR(30), correo VARCHAR(30), tel INT);
+
+INSERT INTO proveedores VALUES ('Joaquin','Jones','joaquin@outlook.com', 999123456);
+
+INSERT INTO proveedores VALUES ('Maria','Lopez','maria@outlook.com', 999789456);
+
+INSERT INTO proveedores VALUES ('Alex','Gaspar','alex@outlook.com', 999147852);
+
+SELECT * FROM proveedores;
+
++---------+-----------+---------------------+-----------+
+| nombres | apellidos | correo              | tel       |
++---------+-----------+---------------------+-----------+
+| Joaquin | Jones     | joaquin@outlook.com | 999123456 |
+| Maria   | Lopez     | maria@outlook.com   | 999789456 |
+| Alex    | Gaspar    | alex@outlook.com    | 999147852 |
++---------+-----------+---------------------+-----------+
