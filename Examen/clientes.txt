@@ -1,0 +1,25 @@
+mysqlsh -u root -p
+
+\sql
+
+CREATE DATABASE Tienda01;
+
+USE Tienda01;
+
+CREATE TABLE clientes (nombres VARCHAR(30), apellidos VARCHAR(30), correo VARCHAR(30), tel INT);
+
+INSERT INTO clientes VALUES ('Pepee','Ramirez','pepe@gmail.com', 45);
+
+INSERT INTO clientes VALUES ('Lucia','Gomez','lucia@gmail.com', 25);
+
+INSERT INTO clientes VALUES ('Daniela','Perez','daniela@gmail.com', 39);
+
+SELECT * FROM clientes;
+
++---------+-----------+-------------------+-----+
+| nombres | apellidos | correo            | tel |
++---------+-----------+-------------------+-----+
+| Pepee   | Ramirez   | pepe@gmail.com    |  45 |
+| Lucia   | Gomez     | lucia@gmail.com   |  25 |
+| Daniela | Perez     | daniela@gmail.com |  39 |
++---------+-----------+-------------------+-----+
